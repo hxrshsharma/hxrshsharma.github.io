@@ -1,0 +1,173 @@
+body {
+  background-color: #272727;
+  padding: 10px;
+}
+
+/*--------------------------------Background-------------------------------------------*/
+
+.background {
+  background: url(/assets/images/bg-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -100;
+  opacity: 0.2;
+}
+
+.video-background video {
+  height: 100%;
+}
+/*------------------------------background---------------------------------------------*/
+
+/*-------------------------------------Terminal----------------------------------------*/
+
+.ter {
+  margin-top: 90px;
+}
+
+.fakeButtons {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  top: 6px;
+  left: 6px;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.fakeMinimize {
+  left: 11px;
+  background-color: #ffc100;
+  border-color: #9d802c;
+}
+
+.fakeZoom {
+  left: 16px;
+  background-color: #00d742;
+  border-color: #049931;
+}
+
+.fakeMenu {
+  margin-top: 90px;
+  width: 550px;
+  box-sizing: border-box;
+  height: 25px;
+  background-color: #bbb;
+  margin: 0 auto;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.fakeScreen {
+  background-color: #151515;
+  box-sizing: border-box;
+  width: 550px;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 300px;
+}
+span {
+  color: #fff;
+  font-weight: bold;
+}
+
+/*------------------------------------terminal-----------------------------------------*/
+
+/*------------------------------------Portfolio----------------------------------------*/
+
+.portfolio {
+  background: #0b2932;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+.profile-card {
+  background-color: #2e2e2e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.profile-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #cccccc;
+}
+
+.profile-card .info {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.profile-card .info .icon {
+  color: #ffaa00;
+  margin-right: 10px;
+}
+
+.about-me {
+  background-color: #2e2e2e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.about-me h3 {
+  font-size: 1.5rem;
+  color: #ffaa00;
+  margin-bottom: 15px;
+}
+
+.about-me p,
+.about-me ul {
+  color: #cccccc;
+  font-size: 1rem;
+}
+
+.navbar-custom {
+  background-color: #2e2e2e;
+  padding: 10px 0;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.navbar-custom .nav-link {
+  color: #ffffff;
+  margin: 0 15px;
+}
+
+.navbar-custom .nav-link.active {
+  color: #ffaa00;
+}
