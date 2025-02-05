@@ -10,13 +10,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   opacity: 0.5;
-  z-index: -1;
+  z-index: 2;
 }
 .video-background {
   position: fixed;
@@ -24,7 +24,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -100;
+  z-index: 1;
   opacity: 0.2;
 }
 
@@ -37,6 +37,8 @@ body {
 
 .ter {
   margin-top: 90px;
+  z-index: 3;
+  position: relative;
 }
 
 .fakeButtons {
@@ -85,7 +87,8 @@ body {
   border-bottom-right-radius: 5px;
   height: 300px;
 }
-span {
+span,
+p {
   color: #fff;
   font-weight: bold;
 }
@@ -95,79 +98,295 @@ span {
 /*------------------------------------Portfolio----------------------------------------*/
 
 .portfolio {
-  background: #0b2932;
-  height: 100vh;
-  width: 100%;
+  background: #0b29327c;
   display: none;
+  position: absolute;
+  min-height: 97vh;
+  width: 98.5vw;
+  z-index: 3;
+  overflow: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+}
+.portfolio::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
-.profile-card {
-  background-color: #2e2e2e;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 50px;
-  text-align: center;
+
+.elem {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  min-height: 200px;
+  width: 300px;
+  background: #0b2932fc;
+  opacity: 0.95;
+  color: white;
+  line-height: 60px;
+  box-shadow: 0 0 30px #000;
 }
 
-.profile-card img {
+.elem h2 {
+  font-size: 14px;
+}
+
+#header {
+  display: grid;
+  position: relative;
+  color: #62adb0;
+  padding: 0px 4px 4px 5px;
+  grid-template-columns: 95% 5%;
+  cursor: move;
+  border-bottom: 1px solid #141616;
+}
+
+#div1,
+#staticDiv1 {
+  min-height: 150px;
+  width: 275px;
+  left: 215px;
+  top: 47px;
+  z-index: 10;
+}
+
+#Picture {
+  height: 250px;
+  width: 275px;
+  padding: 0px 2px 0px 2px;
+  /* border-radius: 15px 15px 15px 15px; */
+}
+
+#Picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+table tr {
+  height: 14px;
+  width: 100%;
+}
+
+table td,
+th {
+  border: 1px solid #62adb0;
+  padding: 5px;
+  line-height: 1.2;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 2px;
+}
+
+a:hover {
+  color: white;
+}
+
+#div2,
+#staticDiv2 {
+  min-height: 150px;
+  width: 200px;
+  left: 1026px;
+  top: 32px;
+  z-index: 8;
+}
+
+#div3,
+#staticDiv3 {
+  min-height: 150px;
+  width: 200px;
+  left: 414px;
+  top: 407px;
+  z-index: 9;
+}
+
+#div4,
+#staticDiv4 {
+  min-height: 500px;
+  width: 600px;
+  left: 503px;
+  top: 55px;
+  z-index: 4;
+}
+#div4 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#div5,
+#staticDiv5 {
+  min-height: 200px;
+  width: 600px;
+  left: 810px;
+  top: 244px;
+  background-color: #000;
+  z-index: 5;
+}
+
+#div5 #header {
+  background-color: #0b2932;
+}
+
+#staticDiv5 {
+  position: relative;
+}
+
+#div6,
+#staticDiv6 {
+  min-height: 200px;
+  width: 600px;
+  left: 438px;
+  top: 13px;
+  z-index: 9;
+}
+
+#div6 .main {
+  width: 40%;
+}
+
+#div7,
+#staticDiv7 {
+  height: 210px;
+  width: 400px;
+  left: 734px;
+  top: 427px;
+  z-index: 6;
+}
+
+#div8,
+#staticDiv8 {
+  min-height: 320px;
+  width: 375px;
+  left: 110px;
+  top: 92px;
+  z-index: 5;
+}
+#div8 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* -------------------------------------- Portfolio Map Beacon Div4 --------------------------------------- */
+.beacon {
+  position: absolute;
+  top: 72%;
+  left: 21%;
+  background: orange;
+  height: 1em;
+  width: 1em;
+  border-radius: 105%;
+  -webkit-animation: grow 0.4s 1 linear;
+  animation: grow 0.4s 1 linear;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}
+.beacon:before {
+  position: absolute;
+  content: "";
+  height: 1em;
+  width: 1em;
+  left: 0;
+  top: 0;
+  background-color: transparent;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 15px;
+  box-shadow: 0px 0px 2px 2px orange;
+  -webkit-animation: active 2s infinite linear;
+  animation: active 2s infinite linear;
+}
+#beacon2 {
+  position: absolute;
+  top: 27%;
+  left: 31%;
+}
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(0.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+  }
 }
 
-.profile-card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+@keyframes grow {
+  0% {
+    transform: scale(0.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
-.profile-card p {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  color: #cccccc;
+@-webkit-keyframes active {
+  0% {
+    -webkit-transform: scale(0.1);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: scale(2.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.profile-card .info {
-  margin-top: 15px;
-  text-align: left;
+@keyframes active {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.profile-card .info .icon {
-  color: #ffaa00;
-  margin-right: 10px;
+/*------------------------------------Portfolio Receiving data Div5----------------------------------------*/
+
+.audio-feed {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
 }
 
-.about-me {
-  background-color: #2e2e2e;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 50px;
+.bar {
+  width: 6px;
+  height: 30px;
+  background-color: rgb(97, 172, 174);
+  transition: height 0.2s ease-in-out;
 }
 
-.about-me h3 {
-  font-size: 1.5rem;
-  color: #ffaa00;
-  margin-bottom: 15px;
+#bar2 {
+  background-color: rgb(41, 69, 70);
 }
 
-.about-me p,
-.about-me ul {
-  color: #cccccc;
-  font-size: 1rem;
+/*------------------------------------Portfolio Server log div 7----------------------------------------*/
+.log-content {
+  font-size: 14px;
+  height: 200px; /* Fixed height */
+  overflow-y: hidden;
+  position: relative;
 }
 
-.navbar-custom {
-  background-color: #2e2e2e;
-  padding: 10px 0;
-  margin-top: 30px;
-  border-radius: 10px;
-}
-
-.navbar-custom .nav-link {
-  color: #ffffff;
-  margin: 0 15px;
-}
-
-.navbar-custom .nav-link.active {
-  color: #ffaa00;
+.log-line {
+  height: 14px;
+  margin: 8px 0;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
